@@ -28,6 +28,6 @@ parameters = {
     "cnt": 4
 }
 
-response = requests.get("https://api.openweathermap.org/data/2.5/forecast", params=parameters)
+response = requests.get("https://api.openweathermap.org/data/2.5/forecast", params=parameters, timeout=60)
 response.raise_for_status()
 api_resp(response)
